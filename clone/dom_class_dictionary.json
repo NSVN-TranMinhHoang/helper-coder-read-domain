@@ -1,0 +1,787 @@
+{
+    "評価イベント": {
+        "name": "評価イベント",
+        "alias": "EvaluationEvent"
+    },
+    "評価イベントRepository": {
+        "name": "評価イベントRepository",
+        "alias": "EvaluationEventRepository"
+    },
+    "評価イベント状況区分": {
+        "name": "評価イベント状況区分",
+        "alias": "EvaluationEventStatus"
+    },
+    "評価タスクの実施期間": {
+        "name": "評価タスクの実施期間",
+        "alias": "EvaluationTaskPeriod"
+    },
+    "評価イベントを開始する": {
+        "name": "評価イベントを開始する",
+        "alias": "StartEvaluationDomainService"
+    },
+    "評価イベント種類": {
+        "name": "評価イベント種類",
+        "alias": "EvaluationEventType"
+    },
+    "評価イベント種類のフロー設定": {
+        "name": "評価イベント種類のフロー設定",
+        "alias": "EvaluationEventTypeFlowSetting"
+    },
+    "評価イベント種類のフロー設定Repository": {
+        "name": "評価イベント種類のフロー設定Repository",
+        "alias": "EvaluationEventTypeFlowSettingRepository"
+    },
+    "評価イベント種類のランク設定": {
+        "name": "評価イベント種類のランク設定",
+        "alias": "EvaluationEventTypeRankSetting"
+    },
+    "評価イベント種類のランク設定Repository": {
+        "name": "評価イベント種類のランク設定Repository",
+        "alias": "EvaluationEventTypeRankSettingRepository"
+    },
+    "評価イベント種類Repository": {
+        "name": "評価イベント種類Repository",
+        "alias": "EvaluationEventTypeRepository"
+    },
+    "評価名称情報": {
+        "name": "評価名称情報",
+        "alias": "EvaluationNameInformation"
+    },
+    "評価ランク階層": {
+        "name": "評価ランク階層",
+        "alias": "EvaluationRankHierarchy"
+    },
+    "評価ステップ": {
+        "name": "評価ステップ",
+        "alias": "EvaluationStep"
+    },
+    "評価タスク": {
+        "name": "評価タスク",
+        "alias": "EvaluationTask"
+    },
+    "評価者公開区分": {
+        "name": "評価者公開区分",
+        "alias": "EvaluatorPublicClassification"
+    },
+    "評価者の利用設定": {
+        "name": "評価者の利用設定",
+        "alias": "EvaluatorUsageSetting"
+    },
+    "人事評価情報": {
+        "name": "人事評価情報",
+        "alias": "PerformanceEvaluationInformation"
+    },
+    "評価結果を人事評価情報に適応する": {
+        "name": "評価結果を人事評価情報に適応する",
+        "alias": "ReflectResultToEvaluationDomainService"
+    },
+    "総合評価ランクを一括更新する": {
+        "name": "総合評価ランクを一括更新する",
+        "alias": "BulkUpdateOverallEvaluationRankDS"
+    },
+    "社員の評価結果": {
+        "name": "社員の評価結果",
+        "alias": "EmployeeEvaluationResult"
+    },
+    "評価シート": {
+        "name": "評価シート",
+        "alias": "EvaluationSheet"
+    },
+    "評価シート内容詳細": {
+        "name": "評価シート内容詳細",
+        "alias": "EvaluationSheetDetail"
+    },
+    "評価シートの一次保存": {
+        "name": "評価シートの一次保存",
+        "alias": "EvaluationSheetDraftSave"
+    },
+    "評価シートの出力データ作成する": {
+        "name": "評価シートの出力データ作成する",
+        "alias": "EvaluationSheetOutputDataCreatorDomainService"
+    },
+    "評価シート登録結果": {
+        "name": "評価シート登録結果",
+        "alias": "EvaluationSheetRegisResults"
+    },
+    "評価シートを取得する": {
+        "name": "評価シートを取得する",
+        "alias": "GetEvaluationSheetDomainService"
+    },
+    "利用中のテンプレートを取得する": {
+        "name": "利用中のテンプレートを取得する",
+        "alias": "GetUsingTemplateDomainService"
+    },
+    "入力値取得条件": {
+        "name": "入力値取得条件",
+        "alias": "InputValueGetCondition"
+    },
+    "項目の内容詳細": {
+        "name": "項目の内容詳細",
+        "alias": "ItemContentDetail"
+    },
+    "テキスト入力(複数行)の内容詳細": {
+        "name": "テキスト入力(複数行)の内容詳細",
+        "alias": "MultiLineTextDetail"
+    },
+    "数値入力の内容詳細": {
+        "name": "数値入力の内容詳細",
+        "alias": "NumberInputDetail"
+    },
+    "テンプレートの出力データ": {
+        "name": "テンプレートの出力データ",
+        "alias": "OutputDataTemplate"
+    },
+    "出力項目情報": {
+        "name": "出力項目情報",
+        "alias": "OutputItemInfo"
+    },
+    "評価シートを登録する": {
+        "name": "評価シートを登録する",
+        "alias": "RegisterEvaluationSheetDomainService"
+    },
+    "評価シートの一次保存を登録する": {
+        "name": "評価シートの一次保存を登録する",
+        "alias": "RegisterTemporaryEvaluationSheetDomainService"
+    },
+    "チェックボックスの選択結果": {
+        "name": "チェックボックスの選択結果",
+        "alias": "SelectedCheckBoxDetail"
+    },
+    "チェックボックスの選択一覧": {
+        "name": "チェックボックスの選択一覧",
+        "alias": "SelectedCheckBoxList"
+    },
+    "選択肢の選択値": {
+        "name": "選択肢の選択値",
+        "alias": "SelectedOptionDetail"
+    },
+    "シート情報": {
+        "name": "シート情報",
+        "alias": "SheetInfo"
+    },
+    "テキスト入力の内容詳細": {
+        "name": "テキスト入力の内容詳細",
+        "alias": "TextInputDetail"
+    },
+    "評価テンプレート": {
+        "name": "評価テンプレート",
+        "alias": "EvaluationTemplate"
+    },
+    "評価テンプレートRepository": {
+        "name": "評価テンプレートRepository",
+        "alias": "EvaluationTemplateRepository"
+    },
+    "入力タイミング管理": {
+        "name": "入力タイミング管理",
+        "alias": "InputTimingManagement"
+    },
+    "レイアウト詳細設定": {
+        "name": "レイアウト詳細設定",
+        "alias": "LayoutDetailSetting"
+    },
+    "総合評価表示方法": {
+        "name": "総合評価表示方法",
+        "alias": "OverallEvaluationDisplayMethod"
+    },
+    "総合評価ランク設定": {
+        "name": "総合評価ランク設定",
+        "alias": "OverallEvaluationRankSetting"
+    },
+    "チェックボックス": {
+        "name": "チェックボックス",
+        "alias": "CheckBox"
+    },
+    "固定文字": {
+        "name": "固定文字",
+        "alias": "FixedText"
+    },
+    "テキスト入力（複数行）": {
+        "name": "テキスト入力（複数行）",
+        "alias": "MultiLineTextInput"
+    },
+    "数値入力": {
+        "name": "数値入力",
+        "alias": "NumericInput"
+    },
+    "テキスト入力": {
+        "name": "テキスト入力",
+        "alias": "TextInput"
+    },
+    "パーツパレット情報": {
+        "name": "パーツパレット情報",
+        "alias": "PartsPaletteInformation"
+    },
+    "パーツパレット種類": {
+        "name": "パーツパレット種類",
+        "alias": "PartsPaletteType"
+    },
+    "付加情報の表示設定": {
+        "name": "付加情報の表示設定",
+        "alias": "AdditionalInformationDisplaySetting"
+    },
+    "個人情報項目": {
+        "name": "個人情報項目",
+        "alias": "PersonalInformationItem"
+    },
+    "セクション情報": {
+        "name": "セクション情報",
+        "alias": "SectionInformation"
+    },
+    "セクション行単位詳細設定": {
+        "name": "セクション行単位詳細設定",
+        "alias": "SectionRowUnitDetailSetting"
+    },
+    "選択肢": {
+        "name": "選択肢",
+        "alias": "SelectionOption"
+    },
+    "選択肢の表示形式": {
+        "name": "選択肢の表示形式",
+        "alias": "SelectionOptionDisplayFormat"
+    },
+    "選択肢設定": {
+        "name": "選択肢設定",
+        "alias": "SelectionOptionSetting"
+    },
+    "セル情報": {
+        "name": "セル情報",
+        "alias": "CellInformation"
+    },
+    "ヘッダー情報": {
+        "name": "ヘッダー情報",
+        "alias": "HeaderInformation"
+    },
+    "表組み": {
+        "name": "表組み",
+        "alias": "TableStructure"
+    },
+    "会社別テンプレートの割付": {
+        "name": "会社別テンプレートの割付",
+        "alias": "CompanyTemplateAssignment"
+    },
+    "会社別テンプレートの割付Repository": {
+        "name": "会社別テンプレートの割付Repository",
+        "alias": "CompanyTemplateAssignmentRepository"
+    },
+    "指定社員が適応されているテンプレートを取得する": {
+        "name": "指定社員が適応されているテンプレートを取得する",
+        "alias": "EmployeeAppliedTemplateDomainService"
+    },
+    "社員別テンプレートの割付": {
+        "name": "社員別テンプレートの割付",
+        "alias": "EmployeeTemplateAssignment"
+    },
+    "社員別テンプレートの割付Repository": {
+        "name": "社員別テンプレートの割付Repository",
+        "alias": "EmployeeTemplateAssignmentRepository"
+    },
+    ": 社員別テンプレートの割付を登録する": {
+        "name": ": 社員別テンプレートの割付を登録する",
+        "alias": "RegisterEmployeeTemplateAssignmentDomainService"
+    },
+    "評価ステップごとの表示制御": {
+        "name": "評価ステップごとの表示制御",
+        "alias": "DisplayControlPerEvaluationStep"
+    },
+    "評価タスクの担当者ごとの表示制御": {
+        "name": "評価タスクの担当者ごとの表示制御",
+        "alias": "DisplayControlPerTaskAssignee"
+    },
+    "評価タスクの担当者": {
+        "name": "評価タスクの担当者",
+        "alias": "EvaluationTaskAssigneeInEventType"
+    },
+    "評価テンプレートの表示制御": {
+        "name": "評価テンプレートの表示制御",
+        "alias": "EvaluationTemplateDisplayControl",
+        "type": "AggregateRoot",
+        "attributes": [
+            {
+                "name": "会社ID",
+                "alias": null,
+                "type": "社員ID",
+                "isFinal": "○",
+                "description": ""
+            },
+            {
+                "name": "評価イベント種類コード",
+                "alias": null,
+                "type": "評価イベント種類コード",
+                "isFinal": "○",
+                "description": ""
+            },
+            {
+                "name": "評価テンプレートコード",
+                "alias": null,
+                "type": "評価テンプレートコード",
+                "isFinal": "○",
+                "description": ""
+            },
+            {
+                "name": "表示制御",
+                "alias": null,
+                "type": "List<評価ステップごとの表示制御>",
+                "isFinal": "",
+                "description": ""
+            }
+        ],
+        "methods": [
+            {
+                "name": "[1] 表示制御一覧を更新する",
+                "scope": "Public",
+                "inputs": [
+                    {
+                        "name": "評価ステップNO",
+                        "color": "#9c27b0",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "評価タスクNO",
+                        "color": "#00b0ff",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "担当者",
+                        "color": "#e91e63",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "表示制御一覧",
+                        "color": "#2979ff",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ],
+                "outputs": [
+                    {
+                        "name": "-",
+                        "color": "#00bfa5",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ],
+                "localVariables": [
+                    {
+                        "name": "$変更対象",
+                        "color": "#ffaa00",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "$.評価ステップNO",
+                        "color": "#ff007f",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "$.評価タスクNO",
+                        "color": "#76ff03",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "$評価タスク",
+                        "color": "#651fff",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "$評価ステップ",
+                        "color": "#ff3d00",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ],
+                "attributes": [
+                    {
+                        "name": "@表示制御",
+                        "color": "#ff6d00",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "@表示制御一覧",
+                        "color": "#00e5ff",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ]
+            },
+            {
+                "name": "[2] 表示制御一覧を取得する",
+                "scope": "Public",
+                "inputs": [
+                    {
+                        "name": "評価ステップNO",
+                        "color": "#9c27b0",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "評価タスクNO",
+                        "color": "#00b0ff",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "担当者",
+                        "color": "#e91e63",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ],
+                "outputs": [
+                    {
+                        "name": "表示制御一覧",
+                        "color": "#2979ff",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ],
+                "localVariables": [
+                    {
+                        "name": "$.評価ステップNO",
+                        "color": "#ff007f",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "$.評価タスクNO",
+                        "color": "#76ff03",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ],
+                "attributes": [
+                    {
+                        "name": "@表示制御",
+                        "color": "#ff6d00",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ]
+            },
+            {
+                "name": "[3] 担当タスク外の表示制御一覧を取得する",
+                "scope": "Public",
+                "inputs": [
+                    {
+                        "name": "評価ステップNO",
+                        "color": "#9c27b0",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "評価タスクNO",
+                        "color": "#00b0ff",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "担当者",
+                        "color": "#e91e63",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ],
+                "outputs": [
+                    {
+                        "name": "表示制御一覧",
+                        "color": "#2979ff",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ],
+                "localVariables": [
+                    {
+                        "name": "$表示制御一覧",
+                        "color": "#d500f9",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "$.評価ステップNO",
+                        "color": "#ff007f",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "$.評価タスクNO",
+                        "color": "#76ff03",
+                        "alias": null,
+                        "typeObject": null
+                    },
+                    {
+                        "name": "$.表示制御",
+                        "color": "#ff1744",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ],
+                "attributes": [
+                    {
+                        "name": "@表示制御",
+                        "color": "#ff6d00",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ]
+            },
+            {
+                "name": "[prv-1] メソッド名",
+                "scope": "Private",
+                "inputs": [
+                    {
+                        "name": "メソッドのインプット名称",
+                        "color": "#00cc66",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ],
+                "outputs": [
+                    {
+                        "name": "メソッドのアウトプット名称",
+                        "color": "#0070f3",
+                        "alias": null,
+                        "typeObject": null
+                    }
+                ],
+                "localVariables": [],
+                "attributes": []
+            },
+            {
+                "name": "[SystemError]",
+                "scope": "Private",
+                "inputs": [],
+                "outputs": [],
+                "localVariables": [],
+                "attributes": []
+            },
+            {
+                "name": "[R-1]",
+                "scope": "Require",
+                "inputs": [],
+                "outputs": [],
+                "localVariables": [],
+                "attributes": []
+            }
+        ],
+        "attributeColors": {
+            "@会社ID": "#ff1744",
+            "@評価イベント種類コード": "#00cc66",
+            "@評価テンプレートコード": "#0070f3",
+            "@表示制御": "#ff6d00"
+        }
+    },
+    "評価者タスク対象区分": {
+        "name": "評価者タスク対象区分",
+        "alias": "EvaluatorTaskTargetClassification"
+    },
+    "評価テンプレートの表示制御Repository": {
+        "name": "評価テンプレートの表示制御Repository",
+        "alias": "EvlTemplateDisplayControlRepository"
+    },
+    "パーツパレットの表示制御": {
+        "name": "パーツパレットの表示制御",
+        "alias": "PartsPaletteDisplayControl"
+    },
+    "パーツパレット表示制御詳細": {
+        "name": "パーツパレット表示制御詳細",
+        "alias": "PartsPaletteDisplayControlDetail"
+    },
+    "パーツパレット表示制御一覧": {
+        "name": "パーツパレット表示制御一覧",
+        "alias": "PartsPaletteDisplayControlList"
+    },
+    "パーツパレット表示制御一覧を取得する": {
+        "name": "パーツパレット表示制御一覧を取得する",
+        "alias": "PartsPaletteDisplayControlListDomainService"
+    },
+    "承認形式": {
+        "name": "承認形式",
+        "alias": "ApprovalType"
+    },
+    "会社別評価者": {
+        "name": "会社別評価者",
+        "alias": "CompanyEvaluator"
+    },
+    "会社別評価者Repository": {
+        "name": "会社別評価者Repository",
+        "alias": "CompanyEvaluatorRepository"
+    },
+    "評価イベント担当者を作成する": {
+        "name": "評価イベント担当者を作成する",
+        "alias": "CreateEvaluationEventPersonDomainService"
+    },
+    "部門別評価者": {
+        "name": "部門別評価者",
+        "alias": "DepartmentEvaluator"
+    },
+    "部門別評価者Repository": {
+        "name": "部門別評価者Repository",
+        "alias": "DepartmentEvaluatorRepository"
+    },
+    "評価部門職位グループ情報": {
+        "name": "評価部門職位グループ情報",
+        "alias": "DepartmentPositionGroupEvaluatorFrame"
+    },
+    "社員別評価者": {
+        "name": "社員別評価者",
+        "alias": "EmployeeEvaluator"
+    },
+    "社員別評価者Repository": {
+        "name": "社員別評価者Repository",
+        "alias": "EmployeeEvaluatorRepository"
+    },
+    "評価イベント評価者": {
+        "name": "評価イベント評価者",
+        "alias": "EvaluationEventEvaluator"
+    },
+    "評価者枠": {
+        "name": "評価者枠",
+        "alias": "Evaluator"
+    },
+    "評価者情報": {
+        "name": "評価者情報",
+        "alias": "EvaluatorInfo"
+    },
+    "評価者種類": {
+        "name": "評価者種類",
+        "alias": "EvaluatorType"
+    },
+    "評価職位グループ評価者枠": {
+        "name": "評価職位グループ評価者枠",
+        "alias": "PositionGroupEvaluatorFrame"
+    },
+    "評価イベント担当者": {
+        "name": "評価イベント担当者",
+        "alias": "EvaluationEventStaff"
+    },
+    "評価イベント担当者Repository": {
+        "name": "評価イベント担当者Repository",
+        "alias": "EvaluationEventStaffRepository"
+    },
+    "評価シートの進行状況": {
+        "name": "評価シートの進行状況",
+        "alias": "EvaluationSheetProgress"
+    },
+    "評価シートの利用者": {
+        "name": "評価シートの利用者",
+        "alias": "EvaluationSheetUser"
+    },
+    "評価ステップごとの進行状況": {
+        "name": "評価ステップごとの進行状況",
+        "alias": "EvaluationStepProgress"
+    },
+    "評価対象者のイベント進行状況": {
+        "name": "評価対象者のイベント進行状況",
+        "alias": "EvaluationTargetEventProgress"
+    },
+    "評価対象者のイベント進行状況Repository": {
+        "name": "評価対象者のイベント進行状況Repository",
+        "alias": "EvaluationTargetEventProgressRepository"
+    },
+    "指定社員の評価対象者": {
+        "name": "指定社員の評価対象者",
+        "alias": "EvaluationTargetInfo"
+    },
+    "評価タスク担当者の進行状況": {
+        "name": "評価タスク担当者の進行状況",
+        "alias": "EvaluationTaskAssigneeProgress"
+    },
+    "評価タスクごとの進行状況": {
+        "name": "評価タスクごとの進行状況",
+        "alias": "EvaluationTaskProgress"
+    },
+    "評価ステップごとの評価者": {
+        "name": "評価ステップごとの評価者",
+        "alias": "EvaluatorPerStep"
+    },
+    "評価タスクごとの評価者": {
+        "name": "評価タスクごとの評価者",
+        "alias": "EvaluatorPerTask"
+    },
+    "差戻内容": {
+        "name": "差戻内容",
+        "alias": "RemandContent"
+    },
+    "進行状況を作成する": {
+        "name": "進行状況を作成する",
+        "alias": "CreateEvaluationProgressDomainService"
+    },
+    "評価イベント進捗状況": {
+        "name": "評価イベント進捗状況",
+        "alias": "DepartmentProgressStatusTemporary"
+    },
+    "部門ごとのステップ未完了状況を取得する": {
+        "name": "部門ごとのステップ未完了状況を取得する",
+        "alias": "DepartmentStepIncompleteStatusDS"
+    },
+    "利用きでる機能を判定する": {
+        "name": "利用きでる機能を判定する",
+        "alias": "DetermineAvailableFunctionDomainService"
+    },
+    "エラー社員": {
+        "name": "エラー社員",
+        "alias": "EvaluationEmpErrorInfo"
+    },
+    "評価イベント実行結果": {
+        "name": "評価イベント実行結果",
+        "alias": "EvaluationEventExecutionTemporary"
+    },
+    "進行状況中のタスク情報を取得する": {
+        "name": "進行状況中のタスク情報を取得する",
+        "alias": "EvaluationSheetProgressDomainService"
+    },
+    "目標入力の利用者を特定する": {
+        "name": "目標入力の利用者を特定する",
+        "alias": "EvaluationSheetUserIdentifierDomainService"
+    },
+    "指定社員の評価対象者を取得する": {
+        "name": "指定社員の評価対象者を取得する",
+        "alias": "GetEvaluationTargetsByEmpDomainService"
+    },
+    "評価タスクごとの評価者を取得する": {
+        "name": "評価タスクごとの評価者を取得する",
+        "alias": "GetEvaluatorsByEvaluationTaskService"
+    },
+    "[1] 評価イベント中の評価タスクの評価者をすべて取得する": {
+        "name": "[1] 評価イベント中の評価タスクの評価者をすべて取得する",
+        "alias": "Require"
+    },
+    "評価者変更を反映する": {
+        "name": "評価者変更を反映する",
+        "alias": "ReflectEvaluatorChangeDomainService"
+    },
+    "評価イベントの進行状況をリセットする": {
+        "name": "評価イベントの進行状況をリセットする",
+        "alias": "ResetEvaluationEventProgressService"
+    },
+    "[1] 反映する": {
+        "name": "[1] 反映する",
+        "alias": "Require"
+    },
+    "指定社員が担当者か判断する": {
+        "name": "指定社員が担当者か判断する",
+        "alias": "SpecifiedEmployeeTaskAssigneeDomainService"
+    },
+    "利用できる機能": {
+        "name": "利用できる機能",
+        "alias": "AvailableFunction"
+    },
+    "状況区分": {
+        "name": "状況区分",
+        "alias": "StatusClassification"
+    },
+    "タスク進行状況": {
+        "name": "タスク進行状況",
+        "alias": "TaskProgressStatus"
+    },
+    "Unit test for BulkUpdateTargetPeriodEvalRankDS": {
+        "name": "Unit test for BulkUpdateTargetPeriodEvalRankDS",
+        "alias": "BulkUpdateOverallEvaluationRankDSTest"
+    }
+}
