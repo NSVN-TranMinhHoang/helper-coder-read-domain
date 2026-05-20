@@ -3,6 +3,8 @@
 // @namespace    https://docs.scriptcat.org/
 // @version      0.1.2
 // @description  Japanese -> Vietnamese helper with advanced dictionary management
+// @downloadURL  https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/translate/domain-helper.user.js
+// @updateURL    https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/translate/domain-helper.user.js
 // @author       You
 // @match        http://192.168.50.14:81/*
 // @grant        GM_addStyle

@@ -22,25 +22,19 @@ Các file chính hiện có:
 4. Chọn extension phù hợp và bấm `Install`.
 5. Sau khi cài xong, nếu có yêu cầu reload VS Code thì bấm `Reload`.
 
-> Nếu đã biết `extension id` của Script Cat, có thể cài nhanh bằng link sau:
-> `vscode:extension/<extension-id>`
-
 ## 3. Link mở Script Cat và file help.js
 
-### Mở file nguồn trong VS Code
-- [Mở `translate/domain-helper.js`](vscode://file/c:/Users/Admin/Desktop/Workspace/script/files/translate/domain-helper.js)
-- [Mở `translate/tab-helper.js`](vscode://file/c:/Users/Admin/Desktop/Workspace/script/files/translate/tab-helper.js)
-- [Mở `variable-maker-color/color-helper.js`](vscode://file/c:/Users/Admin/Desktop/Workspace/script/files/variable-maker-color/color-helper.js)
+### Cài đặt helper  **Script Cat**.
+- Mở [`translate/domain-helper.user.js`](https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/translate/domain-helper.user.js)
+- Mở [`translate/tab-helper.user.js`](https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/translate/domain-helper.user.js)
+- Mở [`variable-maker-color/color-helper.user.js`](https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/variable-maker-color/color-helper.user.js)
+
 
 ### Mở trang Script Cat trên web
 - Nếu bạn muốn mở trực tiếp giao diện Script Cat trên web để lưu cấu hình, dùng link sau:
   - [Mở Script Cat Web](https://docs.scriptcat.org/)
 
 > Nếu Script Cat web của bạn có URL khác, thay `https://docs.scriptcat.org/` bằng URL đó.
-
-### Tự động lấy thông tin file help.js
-- Workspace hiện tại chưa có file `help.js`.
-- Bạn có thể mở file `translate/domain-helper.js`, `translate/tab-helper.js`, hoặc `variable-maker-color/color-helper.js` và dùng Script Cat trên web để phân tích thông tin.
 
 ## 4. Cách sử dụng
 
@@ -56,9 +50,8 @@ Các file chính hiện có:
 
 ### 4.3 Quản lý alias class, attribute và method
 - Mở `Script Cat` hoặc form quản lý class trong phần `#index-files`.
-- Nhập `alias` cho class và `typeObject` cho class.
-- Nhập `alias` và `typeObject` cho các attributes.
-- Nhập `alias` cho các methods.
+- Nhập `alias` cho class.
+- Nhập `alias` các attributes, methods class.
 - Bấm `Lưu` để ghi vào `localStorage`.
 
 ### 4.4 Kịch bản sử dụng thường gặp
@@ -66,9 +59,3 @@ Các file chính hiện có:
 2. Cài Script Cat và mở command để phân tích file.
 3. Tìm từ Nhật cần dịch, nhập alias vào panel.
 4. Lưu và kiểm tra tooltip hiển thị trong trang web.
-
----
-
-## Ghi chú
-- File này là tài liệu tổng hợp nhanh cho Redmine.
-- Nếu cần bổ sung liên kết `vscode://` chính xác cho Script Cat, cần biết `extension id` hoặc command name.
