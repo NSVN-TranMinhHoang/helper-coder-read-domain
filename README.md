@@ -14,32 +14,48 @@ Các file chính hiện có:
 - `translate/tab-helper.js` — dialog dịch nhanh trên tab / iframe
 - `variable-maker-color/color-helper.js` — parse bảng method và tô màu biến, attribute
 
-## 2. Hướng dẫn cài đặt extension Script Cat
+## 2. Hướng dẫn cài đặt extension **Tampermonkey**hoặc **Script Cat**
 
-1. Mở Visual Studio Code.
-2. Vào `Extensions` (biểu tượng ô vuông bên trái) hoặc nhấn `Ctrl+Shift+X`.
-3. Tìm kiếm từ khóa: `Script Cat`.
-4. Chọn extension phù hợp và bấm `Install`.
-5. Sau khi cài xong, nếu có yêu cầu reload VS Code thì bấm `Reload`.
 
-## 3. Link mở Script Cat và file help.js
+### Bước 1: Cài đặt Tampermonkey extension
 
-### Cài đặt helper  **Script Cat**.
+**Tải Tampermonkey**: [https://www.tampermonkey.net/](https://www.tampermonkey.net/)
+**Tải Tampermonkey**: [https://docs.scriptcat.org/](https://docs.scriptcat.org/)
+
+Hoặc dùng các link tải trực tiếp dưới đây:
+
+- **Google Chrome / Microsoft Edge / Cốc Cốc**: Cài đặt từ [Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo).
+- **Mozilla Firefox**: Cài đặt từ [Firefox Add-ons](https://addons.mozilla.org/vi/firefox/addon/tampermonkey/).
+
+#### Lưu ý với người lần đầu cài đặt Tampermonkey
+
+Lần đầu cài đặt Tampermonkey, ở icon của Tampermonkey sẽ hiện ra một cái chữ "X" đỏ, bạn cần thao tác khác để kích hoạt Tampermonkey.
+
+![Tampermonkey Disabled](./asset/guides/tampermonkey-disabled.png)
+
+- Bấm vào icon của Tampermonkey.
+- Chọn dấu 3 chấm hoặc chuột phải vào icon của Tampermonkey.
+- Chọn "Manage Extension" (Quản lý).
+
+![Tampermonkey Manage](./asset/guides/tampermonkey-activation.png)
+
+- Bật Allow Userscripts
+
+![Tampermonkey Allow Userscript](./asset/guides/tempermonkey-allow-userscript.png)
+
+Hướng dẫn chi tiết hơn [tại đây](https://www.tampermonkey.net/faq.php?q=Q209#Q209).
+
+### Bước 2: Cài đặt helper cho **Tampermonkey**, **Script Cat** extension
+1. Mở app Userscripts lên rồi đóng.
+2. Mở trình duyệt Safari và truy cập vào link
 - Mở [`translate/domain-helper.user.js`](https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/translate/domain-helper.user.js)
 - Mở [`translate/tab-helper.user.js`](https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/translate/domain-helper.user.js)
 - Mở [`variable-maker-color/color-helper.user.js`](https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/variable-maker-color/color-helper.user.js)
-
-
-### Mở trang Script Cat trên web
-- Nếu bạn muốn mở trực tiếp giao diện Script Cat trên web để lưu cấu hình, dùng link sau:
-  - [Mở Script Cat Web](https://docs.scriptcat.org/)
-
-> Nếu Script Cat web của bạn có URL khác, thay `https://docs.scriptcat.org/` bằng URL đó.
-
+4. Ấn lưu
 ## 4. Cách sử dụng
 
-### 4.1 Sử dụng chức năng dịch nhanh
-- Trong giao diện web, click chuột phải vào một dòng tiếng Nhật trong `#index-files`.
+### 4.1 Sử dụng chức năng ghi chú
+- Trong giao diện web http://192.168.50.14:81/,
 - Tooltip dịch sẽ hiện nếu có alias trong `localStorage`.
 - Nếu chưa có alias, mở popup để nhập và lưu.
 
@@ -53,9 +69,3 @@ Các file chính hiện có:
 - Nhập `alias` cho class.
 - Nhập `alias` các attributes, methods class.
 - Bấm `Lưu` để ghi vào `localStorage`.
-
-### 4.4 Kịch bản sử dụng thường gặp
-1. Mở file `translate/domain-helper.js` và kiểm tra cấu trúc dictionary.
-2. Cài Script Cat và mở command để phân tích file.
-3. Tìm từ Nhật cần dịch, nhập alias vào panel.
-4. Lưu và kiểm tra tooltip hiển thị trong trang web.
