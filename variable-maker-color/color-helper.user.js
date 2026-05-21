@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Variable Maker Color v2 (Fixed)
 // @namespace    https://docs.scriptcat.org/
-// @version      0.2.0
+// @version      0.2.1
 // @description  Fixed: Variable detection, $.field underline, no nested spans
 // @downloadURL  https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/variable-maker-color/color-helper.user.js
 // @updateURL    https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/variable-maker-color/color-helper.user.js
@@ -235,8 +235,12 @@
         return [...new Set(matches)];
     }
 
-    function isMethodHeaderRow(text) {
-        return /^\[(.*?)\]/.test(text) && !/[\(\)]/.test(text) && !/\[.*?Exception\]/i.test(text);
+    function isMethodHeaderRow(element) {
+        const text = normalize(element.innerText);
+        if (element.children.length > 0) {
+            return false;
+        }
+        return /^\[(.*?)\]/.test(text) && !/\[.*?Exception\]/i.test(text); // && !/[\(\)]/.test(text)
     }
 
     /**
@@ -353,7 +357,7 @@
             const rowText = normalize(row.innerText);
 
             /* Stop nếu gặp method tiếp theo */
-            if (i !== startIndex && isMethodHeaderRow(rowText)) {
+            if (i !== startIndex && isMethodHeaderRow(row)) {
                 break;
             }
 
@@ -452,7 +456,7 @@
             const rowText = normalize(row.innerText);
 
             /* Dừng nếu gặp section khác (■...) hoặc method ([...]) */
-            if ((i !== startIndex && rowText.startsWith("■")) || isMethodHeaderRow(rowText)) {
+            if ((i !== startIndex && rowText.startsWith("■")) || isMethodHeaderRow(row)) {
                 break;
             }
 
@@ -541,8 +545,7 @@
                 const text = normalize(td.innerText);
 
                 /* Phát hiện method */
-                const isMethod = isMethodHeaderRow(text);
-                if(isMethod) console.log(text)
+                const isMethod = isMethodHeaderRow(td);
                 if (!isMethod) continue;
 
                 const method = {
@@ -578,13 +581,7 @@
      * Hàm chính - chạy parser
      */
     function run() {
-
         const classInfo = parseDocument();
-        // console.log(classInfo);
-
-
-        // exportAsTable();
-        // exportAsJSON();
         settingAlisa(classInfo);
         return classInfo;
     }
@@ -677,7 +674,6 @@
         DICTIONARY[classInfo.name] = merged;
         saveDictionary(DICTIONARY);
     }
-
 
     function saveDictionary(DICTIONARY) {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(DICTIONARY));
