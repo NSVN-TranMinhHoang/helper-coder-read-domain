@@ -231,7 +231,8 @@
      * Thuộc tính bắt đầu bằng @
      */
     function extractAttributes(text) {
-        const matches = text.match(/@[a-zA-Z0-9_\u30a0-\u30ff\u3040-\u309f\u4e00-\u9fff]+/g) || [];
+        const matches = (text.match(/@[a-zA-Z0-9_\u30a0-\u30ff\u3040-\u309f\u4e00-\u9fff]+/g) || [])
+            .filter(match => !['@required', '@require'].includes(match.toLowerCase()));
         return [...new Set(matches)];
     }
 
