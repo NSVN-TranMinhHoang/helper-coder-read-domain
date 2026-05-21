@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Variable Maker Color v2 (Fixed)
 // @namespace    https://docs.scriptcat.org/
-// @version      0.2.1
+// @version      0.2.2
 // @description  Fixed: Variable detection, $.field underline, no nested spans
 // @downloadURL  https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/variable-maker-color/color-helper.user.js
 // @updateURL    https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/variable-maker-color/color-helper.user.js
@@ -244,6 +244,10 @@
         return /^\[(.*?)\]/.test(text) && !/\[.*?Exception\]/i.test(text); // && !/[\(\)]/.test(text)
     }
 
+    function rowHasMethodHeader(row) {
+        return [...row.querySelectorAll("td")].some(isMethodHeaderRow);
+    }
+
     /**
      * FIX #3: Tô màu cho các biến trong element
      * Cách: Replace từ dài nhất trước, tránh nested spans
@@ -358,13 +362,15 @@
             const rowText = normalize(row.innerText);
 
             /* Stop nếu gặp method tiếp theo */
-            if (i !== startIndex && isMethodHeaderRow(row)) {
+            if (i !== startIndex && rowHasMethodHeader(row)) {
                 break;
             }
 
-            const tds = [...row.querySelectorAll("td")];
-            const texts = tds.map((td) => normalize(td.innerText))
-                .filter(Boolean);
+            const tdEntries = [...row.querySelectorAll("td")].map((td) => ({
+                td,
+                text: normalize(td.innerText)
+            }));
+            const texts = tdEntries.map(({ text }) => text).filter(Boolean);
 
             /* Phát hiện input/output section */
             const hasInput = texts.some((t) => t.toLowerCase() === "input");
@@ -436,8 +442,8 @@
             }
 
             /* Tô màu các phần tử */
-            tds.forEach((td) => {
-                if (!normalize(td.innerText)) return;
+            tdEntries.forEach(({ td, text }) => {
+                if (!text) return;
 
                 colorizeVariables(td, variableColors);
                 colorizeAttributes(td, attributeColors);
@@ -457,13 +463,15 @@
             const rowText = normalize(row.innerText);
 
             /* Dừng nếu gặp section khác (■...) hoặc method ([...]) */
-            if ((i !== startIndex && rowText.startsWith("■")) || isMethodHeaderRow(row)) {
+            if ((i !== startIndex && rowText.startsWith("■")) || rowHasMethodHeader(row)) {
                 break;
             }
 
-            const tds = [...row.querySelectorAll("td")];
-            const texts = tds.map((td) => normalize(td.innerText))
-                .filter(Boolean);
+            const tdEntries = [...row.querySelectorAll("td")].map((td) => ({
+                td,
+                text: normalize(td.innerText)
+            }));
+            const texts = tdEntries.map(({ text }) => text).filter(Boolean);
 
             /* Skip header rows (Name, Type, etc) */
             if (texts.some(t => t === "Name" || t === "Type")) {
@@ -488,8 +496,8 @@
                     attributeColors[colorName] = getOrCreateColor(colorName);
 
                     /* Tô màu nền cho attribute trong HTML */
-                    tds.forEach((td) => {
-                        if (!normalize(td.innerText)) return;
+                    tdEntries.forEach(({ td, text }) => {
+                        if (!text) return;
                         colorizeTableAttributes(td, attributeName, attributeColors[colorName]);
                     });
                 }
@@ -588,6 +596,7 @@
     }
 
     function settingAlisa(classInfo) {
+        if(classInfo.name == '修正履歴') return;
         updateClass(classInfo);
     }
 

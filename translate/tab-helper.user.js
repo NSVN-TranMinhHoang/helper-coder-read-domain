@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Domain Helper Tab v5
 // @namespace    https://docs.scriptcat.org/
-// @version      0.1.2
+// @version      0.1.3
 // @description  Japanese -> Vietnamese helper for tab content (lightweight)
 // @downloadURL  https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/translate/tab-helper.user.js
 // @updateURL    https://nsvn-tranminhhoang.github.io/helper-coder-read-domain/translate/tab-helper.user.js
@@ -96,6 +96,11 @@
         const links = doc.querySelectorAll('a[target="frSheet"]');
 
         links.forEach(($a) => {
+            const jp = normalizeText($a.textContent);
+            if(jp === '修正履歴') {
+                return;
+            }
+
             if ($a.dataset.jpReady !== '1') {
                 $a.dataset.jpReady = '1';
                 $a.addEventListener('contextmenu', (e) => {
@@ -107,7 +112,6 @@
                 });
             }
 
-            const jp = normalizeText($a.textContent);
             const objClass = DICTIONARY[jp] ?? {};
             const vi = objClass.alias;
             const existed =
