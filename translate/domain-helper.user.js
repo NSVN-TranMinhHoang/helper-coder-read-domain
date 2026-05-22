@@ -1634,18 +1634,17 @@
             }
             /* Class info panel */
             #body #index {
-                postion: relative;
+                position: relative;
             }
 
             #jp-helper-class-info-panel {
-                margin: 16px 0;
                 padding: 12px;
                 border-radius: 14px;
                 background: #ffffff;
                 border: 1px solid #dde4ea;
                 box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
-                max-width: 100%;
-                position: absolute;
+                min-width: 300px;
+                position: sticky;
                 bottom: 2px;
             }
             #jp-helper-class-info-panel::-webkit-scrollbar {
